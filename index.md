@@ -27,10 +27,21 @@
 - ctrl+o then enter to save
 - ctrl+x to exit
 
-## Installing PyPhoenixMR
+## Creating a GitHub Personal Access Token (PAT)
+- Go to your Github account.
+- Go to Settings > Developer Settings > Personal Access Tokens > Tokens (Classic).
+- Generate a new token (classic).
+- Name it something (i.e, Remote Deployment).
+- Set expiration to no expiration.
+- Under **Select Scopes** make sure ALL from **repo** and ALL from **write:packages** are ticked.
+- At the bottom of page hit Generate Token.
+- Copy your Token and save it somewhere private (you will need this to install PyPhoenixMR and keep it updated easily).
 
-    unzip PyPhoenixMR-master.zip
-    cd PyPhoenixMR-master
+## Installing PyPhoenixMR
+Using your PAT from before, replace PAT with your PAT key:
+
+    git clone https://PAT@github.com/Phillip-Duncan/PyPhoenixMR.git
+    cd PyPhoenixMR
     pip install -e .
 
  **YOU HAVE NOW COMPLETED THE SETUP. THE FOLLOWING IS THE COMMAND YOU HAVE TO RUN AT EACH LOGIN OR SSH INTO A REMOTE COMPUTE SERVER:**
@@ -38,6 +49,13 @@
 ## At each login or SSH (to initialize all local paths)
 
     source ~/.bashrc
+    
+## Updating PyPhoenixMR
+From within the PyPhoenixMR directory just run:
+
+    git fetch
+    
+This will update the current master version of PyPhoenixMR.
 
 
 ## Setting up Simulation Engine, Inputs, etc.
