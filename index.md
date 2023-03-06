@@ -53,7 +53,7 @@ Using your PAT from before, replace PAT with your PAT key:
 ## Updating PyPhoenixMR
 From within the PyPhoenixMR directory just run:
 
-    git fetch
+    git pull
     
 This will update the current master version of PyPhoenixMR.
 
